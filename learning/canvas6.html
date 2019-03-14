@@ -17,6 +17,37 @@
 	function comenzar(){
 		var elemento = document.getElementById("lienzo");
 		lienzo = elemento.getContext("2d");
+		
+		
+		lienzo.arc(200,150,100,0,Math.PI*2,false);
+		lienzo.stroke();
+		
+		lienzo.lineWidth=10;
+		lienzo.lineCap="round";
+		lienzo.beginPath();
+		lienzo.arc(200,170,50,0,Math.PI,false);
+		//lienzo.closePath();
+		lienzo.stroke();
+		
+		lienzo.lineWidth=5;
+		lienzo.lineJoin="miter"; //round,bevel,miter
+		lienzo.miterLimit=2;
+		lienzo.beginPath();
+		lienzo.moveTo(195,135);
+		lienzo.lineTo(215,155);
+		lienzo.lineTo(195,155);
+		lienzo.stroke();
+		
+		lienzo.beginPath();  
+		lienzo.width=2;
+		lienzo.arc(170,130,10,0,Math.PI*2,false);
+		lienzo.stroke();
+		
+		lienzo.beginPath();  
+		lienzo.width=2;
+		lienzo.arc(230,130,10,0,Math.PI*2,false);
+		lienzo.stroke();
+		
 	}
 	window.addEventListener("load",comenzar,false);
 </script>
