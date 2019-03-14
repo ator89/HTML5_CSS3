@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ARCS and STROKES</title>
+<style>
+	#lienzo{
+		border:1px solid blue;
+	}	
+</style>
+<script>
+	function comenzar(){
+		var elemento=document.getElementById("lienzo");
+		lienzo = elemento.getContext("2d");
+		lienzo.beginPath(); // <--- comenzar a dibujar
+		
+		//         ( x , y , radious, radian, randian, mirror)
+		lienzo.arc(100,100,50,1,3,true);
+		lienzo.stroke();
+	}
+	window.addEventListener("load",comenzar,false);
+</script>
+</head>
+
+<body>
+<canvas width="500" height="300" id="lienzo">
+	NO HTML5 SUPPORT
+</canvas>
+</body>
+</html>
