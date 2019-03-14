@@ -15,7 +15,14 @@
 		lienzo.beginPath(); // <--- comenzar a dibujar
 		
 		//         ( x , y , radious, radian, randian, mirror)
-		lienzo.arc(100,100,50,1,3,true);
+		//lienzo.arc(300,100,150,0,Math.PI,false);
+		
+		lienzo.moveTo(50,50);
+		
+		//                      
+		//lienzo.quadraticCurveTo(100,185,2,200);
+		
+		lienzo.bezierCurveTo(200,124,230,125,250,200);
 		lienzo.stroke();
 	}
 	window.addEventListener("load",comenzar,false);
