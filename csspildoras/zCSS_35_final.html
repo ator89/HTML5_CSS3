@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<style type="text/css">
+	a[href^="http://paginaweb.com"]{
+		color: #ff0;
+		font-size: 24px;
+	}
+	a[href$=".pdf"]{
+		color: #60F;
+		font-size: 54px;
+		text-decoration: none;
+	}
+	
+	#listas ul :first-child{
+		color:#00f;
+		font-weight: bold;
+	}
+	
+	#listas ul :last-child{
+		color:#f00;
+	}
+	
+	#listas ol :nth-child(3n+2){
+		color:#090;
+	}
+	
+	#barralat{
+		background-color: #cf9;
+		width: 350px;
+	}
+	
+	#barralat p:first-of-type{
+		color: #00f;
+		font-weight: bold;
+	}
+	
+	#barralat p:last-of-type{ 
+		color:#f00;
+		font-weight: bold;
+		border-bottom: dotted #03c 5px;
+	}
+	
+</style>
+</head>
+
+<body>
+<p><a href="ejemplo.xls"></a>Ejemplo Excel</p>
+<p><a href="http://paginaweb.com">Página web</a></p>
+<p><a href="http://google.com">Google</a></p>
+<p><a href="balance.pdf">PDF</a></p>
+
+<div id="listas">
+
+<ul>
+	<li>Opt 1</li>
+	<li>Opt 2</li>
+	<li>Opt 3</li>
+	<li>Opt 4</li>
+</ul>
+
+<ul>
+	<li>Opt 1</li>
+	<li>Opt 2</li>
+	<li>Opt 3</li>
+	<li>Opt 4</li>
+</ul>
+
+<ol>
+	<li>Opt 1</li>
+	<li>Opt 2</li>
+	<li>Opt 3</li>
+	<li>Opt 4</li>
+	<li>Opt 5</li>
+	<li>Opt 6</li>
+	<li>Opt 7</li>
+	<li>Opt 8</li>
+</ol>
+
+</div>
+
+<div id="barralat">
+	<ul>
+	<li>Opt 1</li>
+	<li>Opt 2</li>
+	<li>Opt 3</li>
+	<li>Opt 4</li>
+	
+	<br/>
+	
+	<p>Este es un texto blag asdfsadf asdf asdf.</p>
+	<p>Este es un texto blag asdfsadf asdf asdf.</p>
+	<p>Este es un texto blag asdfsadf asdf asdf.</p>
+	<p>Este es un texto blag asdfsadf asdf asdf.</p>
+</ul>
+</div>
+
+</body>
+</html>

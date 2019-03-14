@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+body{
+	background-color: lightgoldenrodyellow;
+}
+
+h1{
+	text-align: center;
+}
+	
+p{
+	font-family: :Tahoma,Geneva, sans-serif;
+	color:brown;
+	font-size: 18px;
+}

@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+    <head>
+        <meta c harset="utf-8">
+        <title>Forms #1 - 21</title>
+    </head>
+    <body>
+        <section>
+        <form name="miformulario" id="miformulario" method="get" autocomplete="off">
+            
+            Email: &nbsp;<input type="email" name="email" id="email" required><br><br>
+            Buscar: &nbsp;<input type="search" name="search" id="search" autofocus><br><br>
+            URL: &nbsp;<input type="url" name="url" id="url"><br><br><br>
+
+            Edad: &nbsp;<input type="number" name="edad" id="edad" min="1" max="100" step="2" placeholder="Aqui">
+            Edad2: &nbsp;<input type="range" name="edad2" id="edad2" min="5" max="100">
+
+            Fecha: &nbsp;<input type="date" name="fecha" id="fecha">
+            C. Postal: &nbsp;<input pattern="[0-9][5]" name="cpostal" id=cpostal placeholder="5 dígitos">
+
+            <input type="submit" value="Enviar">
+
+        </form>
+        </section>
+
+        <img src="img/6.jpg"><br>
+        Nombre: <input type="text" name="nombre" id="nombre" form="miformulario">
+    </body>
+</html>

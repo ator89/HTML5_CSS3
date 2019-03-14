@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style type="text/css">
+
+	@font-face{
+		font-family: 'BookAntiqua';
+		src:url('book-antiqua.ttf');
+	}
+
+	p[name="miselementos"]{ /* name^=, name$=, name*= */
+		color: blue;
+	}
+
+	p:nth-child(2){
+		color:aqua;
+	}
+
+	#principal{
+		width: 500px;
+		/*background-color: #00f;*/
+		text-align: center;
+		margin:15px auto;
+		padding: 15px;
+		border:3px solid #ff0;
+		border-radius: 20px 5px 15px 40px;
+		box-shadow: #999 5px;
+		background: -moz-linear-gradient(top, #0ff,#fff);
+		background: -webkit-radial-gradient(center, circle /*elipse*/, #0ff,#fff);
+		background: -ms-linear-gradient(top, #0ff,#fff);
+		background: -o-linear-gradient(top, #0ff,#fff);
+		outline: 2px dashed #0F0;
+		outline-offset: 15px;
+
+		-moz-transform:scale(0.5);
+		-webkit-transform:scale(0.5,-0.5);
+
+		
+		-webkit-transition: -webkit-transform 1s ease 0.5s;
+		-webkit-transform: skew(30deg);
+	}
+
+	#principal:hover{
+		-webkit-transform: rotate(30deg);
+	}
+
+	#titulo{
+		font: bold 36px BookAntiqua;
+		text-shadow: #0F0 3px 3px 5px;
+		color: rgba(red, green, blue, 0.5)
+	}
+
+</style>
+</head>
+
+<body>
+	<header id="principal">
+		<span id="titulo">MI ESTILO</span>	
+	</header>
+
+	<p>Tmsd oifw dgh ms asd</p>
+	<p>Tmsd oifw dgh ms asd</p>
+
+
+<h1>Hola, ¿qué tal?</h1>
+
+<h2>hola2</h2>
+
+<p name="miselementos">Párrafo con texto innecesario para llenar 
+	espacio en la página web de prueba que tiene tablas y formularios
+	 para poder establecer formatos y modificar las propiedades al antojo 
+	 del usuario.</p>
+
+
+
+	 <p>Tmsd oifw dgh ms asd</p>
+<table>
+</table>
+
+<form id="subform" name="subform" method="post" action="">
+	<p><label for="nombre">NOMBRE:</label><input type="text" name="name" ="nombre"/></p>
+</form>
+
+</body>
+
+</html>

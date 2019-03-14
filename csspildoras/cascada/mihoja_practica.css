@@ -1,0 +1,79 @@
+/* CSS Document */
+
+html,body,h1,h2,h3,h4,h5,p,ol,ul,li,code,address,form{
+	padding: 0;
+	margin: 0;
+	font-size: 100%;
+	font-weight: normal;
+}
+
+ol{
+	margin-left: 1.4em;
+	list-style: decimal;
+}
+
+ul{
+	margin-left: 1.4em;
+	list-style: square;
+}
+
+img{
+	border:0;
+}
+
+#principal{
+	float:left;/*organizar lo que vaya a la derecha*/
+	width:580px;
+}
+
+#lateral{
+	margin-left: 600px;
+	padding: 15px;
+	background: #e1cdff;
+}
+
+body{
+	color:#b1967c;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	padding-top: 100px;
+	background: #e1cdff url(images/fondo_cuerpo.png) repeat-x;
+	width: 800px;
+	margin: 0 auto;
+}
+
+h1{
+	font-size: 3em;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	
+}
+
+h2{
+	font-size: 2em;
+	color:#600;
+	margin-bottom: 5px;
+}
+
+#principal h2{
+	color:#e8a064;
+	border-bottom: solid #FFFFFF 2px;
+	background: url(images/flor.png) no-repeat;
+	padding: 0 0 6px 60px; 
+}
+
+#principal p{
+	color: #61616161;
+	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
+	font-size: 1.1em;
+	line-height: 150%;/**/
+	margin-bottom:10px;
+	margin-left: 60px;
+}
+
+#principal .introduccion{
+	color:#6a94cc;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	font-size: 1.2em;
+	margin-left: 0px;
+	margin-bottom: 25px;
+	
+}
