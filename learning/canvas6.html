@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CANVAS 6</title>
+<style>
+	#lienzo{
+		border: 1px solid #f00;
+	}
+	section{
+		width: 800px;
+		position: relative;
+		margin: auto;
+	}
+</style>
+<script>
+	function comenzar(){
+		var elemento = document.getElementById("lienzo");
+		lienzo = elemento.getContext("2d");
+	}
+	window.addEventListener("load",comenzar,false);
+</script>
+</head>
+
+<body>
+<section>
+	<canvas width="800" height="600" id="lienzo">
+		
+	</canvas>
+</section>
+</body>
+</html>
