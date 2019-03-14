@@ -2,12 +2,33 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Untitled Document</title>
+<title>STROKES</title>
+
+<style>
+	#lienzo{
+		border: 1px red solid;
+	}	
+</style>
 <script>
 
 	function comenzar(){
 		var elemento = document.getElementById("lienzo");
 		lienzo = elemento.getContext("2d");
+		lienzo.beginPath();
+		lienzo.moveTo(100,200);
+		lienzo.lineTo(200,200);
+		lienzo.lineTo(150,150);
+		lienzo.lineTo(100,200);
+		lienzo.closePath();
+		lienzo.clip();// <-- crear la máscara
+		lienzo.stroke();
+		//lienzo.fill();
+		lienzo.beginPath();
+		for(i=0;i<250;i+=10){
+			lienzo.moveTo(0,i);
+			lienzo.lineTo(500,i);
+		}
+		lienzo.stroke();
 	}
 	
 	window.addEventListener("load",comenzar,false);
