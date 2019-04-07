@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CANVAS 8</title>
+<style>
+	#lienzo{
+		border: 1px solid #f00;
+	}
+	
+</style>
+<script>
+	function comenzar(){
+		var elemento = document.getElementById("lienzo");
+		lienzo = elemento.getContext("2d");
+		
+		lienzo.font="bold 20px verdana";
+		lienzo.fillText("Hola mundo",50,30);
+		lienzo.translate(100,100);
+		lienzo.scale(0.5,3);
+		lienzo.rotate(Math.PI);
+		
+		lienzo.fillText("Hola mundo",50,30);
+		
+	}
+	window.addEventListener("load",comenzar,false);
+</script>
+</head>
+
+<body>
+<section>
+	<canvas width="1200" height="900" id="lienzo">
+		No soportado
+	</canvas>
+</section>
+</body>
+</html>

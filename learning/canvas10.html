@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CANVAS 10</title>
+<style>
+	#lienzo{
+		border: 1px solid #f00;
+	}
+	
+</style>
+<script>
+	function comenzar(){
+		var elemento = document.getElementById("lienzo");
+		lienzo = elemento.getContext("2d");
+		
+		
+		
+		//lienzo.fillStyle="#880000";
+		//lienzo.fillRect(400,250,300,100);
+		
+		//lienzo.globalCompositeOperation="destination-atop"; 
+		
+		//lienzo.fillStyle="#AAAAFF";
+		
+		//lienzo.font="bold 80px verdana";
+		
+		//lienzo.textAlign="center";
+		//lienzo.textBaseline="middle";
+		//lienzo.fillText("Hola Mundo", 500,300);
+		
+		var imagen = new Image();
+		
+		imagen.src="http://pngimg.com/uploads/anchor/anchor_PNG58.png"; //http://pngimg.com/uploads/anchor/anchor_PNG58.png
+		
+		imagen.addEventListener("load",function(){lienzo.drawImage(imagen,0,0,elemento.width,300)},false);
+		
+	}
+	window.addEventListener("load",comenzar,false);
+</script>
+</head>
+
+<body>
+<section>
+	<canvas width="1200" height="900" id="lienzo">
+		No soportado
+	</canvas>
+</section>
+</body>
+</html>

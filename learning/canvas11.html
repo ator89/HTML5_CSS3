@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CANVAS 11</title>
+<style>
+	#lienzo{
+		border: 1px solid #f00;
+	}
+	
+</style>
+<script>
+	function comenzar(){
+		var elemento = document.getElementById("lienzo");
+		lienzo = elemento.getContext("2d");
+		
+		var imagen = new Image();
+		imagen.src = "img/1.jpg";
+		
+		imagen.addEventListener("load", manipularimagen, false);
+	}
+	
+	function manipularimagen(e){
+		imagen = e.target;
+		lienzo.drawImage(imagen,0,0);//Posicionar imagen en coordenada 0,0
+		
+		var info_imagen = lienzo.getImageData(0,0,145,145); //Seleccionar un recorte de la imagen para captar su info
+		var posicion;
+		
+		//Recorrer pixeles de la imagen (rgb)
+		for( x = 0 ; x < 145; x++ ){
+			for( y = 0; y <= 145; y++){
+				//acceder a posiciones concretas de cada pixel
+				posicion=(info_imagen.width*4*y+(x*4));
+				
+				info_imagen.data[posicion]=255-info_imagen.data[posicion];// red
+				info_imagen.data[posicion+1]=255-info_imagen.data[posicion+1]; //green
+				info_imagen.data[posicion+2]=255-info_imagen.data[posicion+2]; //blue
+			}
+		}
+		
+		lienzo.putImageData(info_imagen,0,0);
+	}
+	
+	window.addEventListener("load",comenzar,false);
+</script>
+</head>
+
+<body>
+<section>
+	<canvas width="1200" height="900" id="lienzo">
+		No soportado
+	</canvas>
+</section>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CANVAS 7</title>
+<style>
+	#lienzo{
+		border: 1px solid #f00;
+	}
+	section{
+		width: 800px;
+		position: relative;
+		margin: auto;
+	}
+</style>
+<script>
+	function comenzar(){
+		var elemento = document.getElementById("lienzo");
+		lienzo = elemento.getContext("2d");
+		
+		lienzo.shadowColor="rgba(0,0,0,0.5)";
+		lienzo.shadowOffsetX=4;
+		lienzo.shadowOffsetY=4;
+		
+		lienzo.shadowBlur=5;
+		
+		lienzo.font="bold 48px verdana";
+		lienzo.textAlign="start"; //comenzar a escribir el texto en las posiciones X y Y
+		lienzo.textBaseline="top";
+		lienzo.fillText("Hola mundo",100,100);
+		
+		var dimensiones = lienzo.measureText("Hola mundo");
+		
+		lienzo.strokeRect(100,100,dimensiones.width+10,58);
+		
+		
+		
+		//---<<Dibujar una línea>>---
+		//lienzo.moveTo(100,100);
+		//lienzo.lineTo(200,100);
+		//lienzo.stroke();
+		
+		
+	}
+	window.addEventListener("load",comenzar,false);
+</script>
+</head>
+
+<body>
+<section>
+	<canvas width="800" height="600" id="lienzo">
+		No soportado
+	</canvas>
+</section>
+</body>
+</html>

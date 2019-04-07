@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CANVAS 9</title>
+<style>
+	#lienzo{
+		border: 1px solid #f00;
+	}
+	
+</style>
+<script>
+	function comenzar(){
+		var elemento = document.getElementById("lienzo");
+		lienzo = elemento.getContext("2d");
+		
+		//transform(1.(X),2.(),3.(),4.(Y),5. oriX, 6. oriY)
+		lienzo.transform(3,0,0,6,0,0);
+		lienzo.font="bold 20px verdana";
+		lienzo.fillText("Hola mundo", 70,100);
+		
+	}
+	window.addEventListener("load",comenzar,false);
+</script>
+</head>
+
+<body>
+<section>
+	<canvas width="1200" height="900" id="lienzo">
+		No soportado
+	</canvas>
+</section>
+</body>
+</html>
