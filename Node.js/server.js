@@ -1,17 +1,21 @@
-//Creating a server
 
+//Writeable and readable streams
 var http = require('http');
 
 var fs = require('fs');
 
 var myReadStream = fs.createReadStream(__dirname + '/readMe.txt', 'utf-8');
+var myWriteStream = fs.createWriteStream(__dirname + '/writeMe.txt');
 
 myReadStream.on('data', function(chunk){
   console.log('new chunk received:');
   console.log(chunk);
+  myWriteStream.write(chunk);
 });
 
 
+
+//Creating a server
 /*
 var server = http.createServer(function(req, res){
   console.log('request was made: ' + req.url);
