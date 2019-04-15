@@ -28,7 +28,7 @@ app.get('/404', function(req,res){
 app.get('/profile/:name', function(req,res){
   //res.send('You are viewing the profile of ' + req.params.name);
   //res.render('profile');
-  var data = {age: 29, job: 'coder'};
+  var data = {age: 29, job: 'coder', hobbies: ['eating', 'learning', 'coding']};
   res.render('profile', {person: req.params.name, data: data });
 });
 
